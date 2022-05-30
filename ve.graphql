@@ -1,0 +1,18 @@
+# Deposit tracks this event from the ve.sol contract
+type Deposit @entity {
+  id: ID! # the transaction hash plus event log
+  tokenId: BigInt!
+  value: BigInt!
+  provider: Bytes!
+  locktime: BigInt!
+  ts: BigInt!
+}
+
+# Withdraw tracks this event from the ve.sol contract
+type Withdraw @entity {
+  id: ID! # the transaction hash plus event log
+  tokenId: BigInt!
+  value: BigInt!
+  provider: Bytes!
+  ts: BigInt!
+}
